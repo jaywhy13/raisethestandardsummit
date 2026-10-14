@@ -96,6 +96,29 @@
             margin-top: 25px;
         }
 
+        .hero-limited {
+            font-family: var(--font-heading);
+            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            color: #000000;
+            background: var(--text-gold);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-body);
+            font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+            font-weight: 500;
+            color: var(--text-light);
+            margin-top: 14px;
+            letter-spacing: 0.05em;
+        }
+
         /* --- Scroll Video Sequence Container --- */
         .scroll-sequence-container {
             position: relative;
@@ -324,6 +347,12 @@
             text-transform: uppercase;
             margin-top: 15px;
             font-weight: 600;
+        }
+
+        .date-hero-venue {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-top: 18px;
         }
 
         /* --- Interactive Split Schedule Section --- */
@@ -635,8 +664,10 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
+            <p class="hero-limited">Limited Spots • Only 800 Men</p>
             <h1 class="hero-title">Raise The Standard</h1>
             <p class="hero-subtitle">Greater Toronto Area Men's Summit</p>
+            <p class="hero-tagline">800 Black Men. 5 Generations. 1 Conversation.</p>
         </div>
     </section>
 
@@ -676,38 +707,38 @@
             <div class="pillars-grid">
                 <div class="pillar-card">
                     <div class="pillar-num">01</div>
-                    <h3 class="pillar-title">Mentorship & Role Models</h3>
-                    <p class="pillar-desc">Connecting youth with accomplished professionals, tradespeople, and leaders across public and private sectors.</p>
+                    <h3 class="pillar-title">Education</h3>
+                    <p class="pillar-desc">School success, literacy, discipline, post-secondary planning, trades, and the future of work.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-num">02</div>
-                    <h3 class="pillar-title">Education & Careers</h3>
-                    <p class="pillar-desc">Workforce readiness, academic success pathways, entrepreneurship, and skilled trades exposure.</p>
+                    <h3 class="pillar-title">Finance</h3>
+                    <p class="pillar-desc">Financial literacy, budgeting, credit, investing, business ownership, and building generational wealth.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-num">03</div>
-                    <h3 class="pillar-title">Wealth & Financial Literacy</h3>
-                    <p class="pillar-desc">Building generational wealth, financial discipline, economic stability, and legacy creation.</p>
+                    <h3 class="pillar-title">Mental Health</h3>
+                    <p class="pillar-desc">Identity, purpose, loneliness, career stress, emotional fatigue, and how men can help each other.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-num">04</div>
-                    <h3 class="pillar-title">Health & Wellness</h3>
-                    <p class="pillar-desc">Addressing mental health, emotional well-being, physical vitality, and personal accountability.</p>
+                    <h3 class="pillar-title">Family</h3>
+                    <p class="pillar-desc">Healthy relationships, fatherhood, co-parenting, marriage under pressure, and restoring family bonds.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-num">05</div>
-                    <h3 class="pillar-title">Family & Fatherhood</h3>
-                    <p class="pillar-desc">Strengthening healthy relationships, navigating life partnership, family structure, and generational legacy.</p>
+                    <h3 class="pillar-title">Justice</h3>
+                    <p class="pillar-desc">Community safety, conflict resolution, intervention, reintegration, and mentorship that prevents harm.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-num">06</div>
-                    <h3 class="pillar-title">Justice & Restorative Impact</h3>
-                    <p class="pillar-desc">Solutions-focused discussions on system contact, reintegration, restoration, and positive community leadership.</p>
+                    <h3 class="pillar-title">Health</h3>
+                    <p class="pillar-desc">Fitness, nutrition, preventative care, heart health, diabetes, and healthy aging.</p>
                 </div>
             </div>
         </div>
@@ -717,8 +748,9 @@
         <div class="container">
             
             <div class="date-hero-banner">
-                <div class="date-hero-title">November 27 – 29, 2026</div>
-                <div class="date-hero-subtitle">Friday • Saturday • Sunday</div>
+                <div class="date-hero-title">December 12 – 13, 2026</div>
+                <div class="date-hero-subtitle">Saturday • Sunday</div>
+                <p class="date-hero-venue">George Brown Polytechnic • 51 Dockside Drive, Toronto, ON M5A 0B6</p>
             </div>
 
             <div class="section-header">
@@ -731,23 +763,18 @@
                 <div class="sticky-left-panel">
                     <div class="date-display-box">
                         <div class="date-slide active" id="slide-0">
-                            <div class="day-code">FRI</div>
-                            <div class="date-sub">Nov 27</div>
+                            <div class="day-code">SAT</div>
+                            <div class="date-sub">Dec 12</div>
                         </div>
                         <div class="date-slide" id="slide-1">
-                            <div class="day-code">SAT</div>
-                            <div class="date-sub">Nov 28</div>
-                        </div>
-                        <div class="date-slide" id="slide-2">
                             <div class="day-code">SUN</div>
-                            <div class="date-sub">Nov 29</div>
+                            <div class="date-sub">Dec 13</div>
                         </div>
                     </div>
 
                     <div class="progress-dots">
                         <div class="dot active" id="dot-0"></div>
                         <div class="dot" id="dot-1"></div>
-                        <div class="dot" id="dot-2"></div>
                     </div>
                 </div>
 
@@ -755,91 +782,134 @@
                     
                     <div class="day-block is-focused" id="day-block-0" data-index="0">
                         <div class="block-badge-header">
-                            <div class="target-badge">Focus: Youth & Male Students (Ages 15–25)</div>
+                            <div class="target-badge">Day One • Understanding the Challenges</div>
                         </div>
 
                         <div class="time-block">
-                            <div class="time-stamp">Afternoon Session • 12:00 PM – 5:00 PM</div>
-                            <h3 class="session-title">Youth Mentorship Experience</h3>
-                            <p class="session-desc">
-                                A structured speed-mentorship session uniting ~300 young men with 50+ accomplished mentors representing trades, business, technology, education, and public service.
-                            </p>
+                            <div class="time-stamp">9:30 AM – 11:30 AM</div>
+                            <h3 class="session-title">Prayer Breakfast (All Men)</h3>
                             <ul class="stream-list">
-                                <li>Direct career, entrepreneurship, and higher education guidance</li>
-                                <li>Discussions on identity, discipline, leadership, and mental wellness</li>
-                                <li>Networking designed to establish ongoing long-term mentorship relationships</li>
+                                <li>Worship & prayer</li>
+                                <li>Main address and testimony panel</li>
+                                <li>Conference charge</li>
                             </ul>
+                        </div>
+
+                        <div class="time-block">
+                            <div class="time-stamp">12:00 PM – 12:45 PM</div>
+                            <h3 class="session-title">Session 1: Education & Future Readiness</h3>
+                            <ul class="stream-list">
+                                <li>What educational barriers are affecting men in your generation?</li>
+                                <li>What is working?</li>
+                                <li>What needs immediate attention?</li>
+                            </ul>
+                        </div>
+
+                        <div class="time-block">
+                            <div class="time-stamp">12:45 PM – 1:45 PM</div>
+                            <h3 class="session-title">Legacy Lunch I</h3>
+                            <p class="session-desc">Intergenerational tables, each seated with a teen representative, a young adult, an adult man, and a senior man.</p>
+                            <ul class="stream-list">
+                                <li>What has your generation done well?</li>
+                                <li>What does your generation wish the next generation understood?</li>
+                                <li>What fears do you have for the future?</li>
+                            </ul>
+                        </div>
+
+                        <div class="time-block">
+                            <div class="time-stamp">2:00 PM – 2:45 PM</div>
+                            <h3 class="session-title">Session 2: Financial Freedom & Economic Mobility</h3>
+                            <ul class="stream-list">
+                                <li>Why are men struggling financially?</li>
+                                <li>What financial skills are most needed?</li>
+                                <li>How do we build generational wealth?</li>
+                            </ul>
+                        </div>
+
+                        <div class="time-block">
+                            <div class="time-stamp">3:00 PM – 3:45 PM</div>
+                            <h3 class="session-title">Session 3: Mental Health & Emotional Wellness</h3>
+                            <ul class="stream-list">
+                                <li>Why do men suffer in silence?</li>
+                                <li>What supports are missing?</li>
+                                <li>How can men help each other?</li>
+                            </ul>
+                        </div>
+
+                        <div class="time-block">
+                            <div class="time-stamp">4:00 PM – 4:45 PM</div>
+                            <h3 class="session-title">Session 4: Family, Fatherhood & Relationships</h3>
+                            <p class="session-desc"><strong style="color: var(--text-gold-bright);">Flagship session.</strong> Dedicated discussion areas include fathers of daughters, fathers of sons, blended families, co-parenting, marriage under pressure, single fathers, and restoring family relationships.</p>
+                        </div>
+
+                        <div class="time-block">
+                            <div class="time-stamp">5:00 PM – 6:00 PM</div>
+                            <h3 class="session-title">Room Reflection Session</h3>
+                            <p class="session-desc">Each room identifies its top 3 concerns, top 3 strengths, and top 3 recommendations. Data is entered immediately into the Action Lab.</p>
                         </div>
                     </div>
 
                     <div class="day-block" id="day-block-1" data-index="1">
                         <div class="block-badge-header">
-                            <div class="target-badge">Focus: Emerging Men & Adult Men</div>
+                            <div class="target-badge">Day Two • Building Solutions</div>
                         </div>
 
                         <div class="time-block">
-                            <div class="time-stamp">10:00 AM – 11:30 AM</div>
-                            <h3 class="session-title">Prayer Breakfast & Keynote Plenary</h3>
-                            <p class="session-desc">A unified morning gathering centered on personal responsibility, resilience, and collective action.</p>
+                            <div class="time-stamp">9:30 AM – 11:30 AM</div>
+                            <h3 class="session-title">Prayer Breakfast</h3>
+                            <p class="session-desc">All men together.</p>
                         </div>
 
                         <div class="time-block">
-                            <div class="time-stamp">12:00 PM – 5:00 PM</div>
-                            <h3 class="session-title">Concurrent Multi-Site Seminar Streams</h3>
-                            <p class="session-desc">Synchronized programming delivered across multi-campus sites via live interactive technology.</p>
-                            
-                            <div class="stream-grid">
-                                <div class="stream-box">
-                                    <div class="stream-badge">Emerging Men Stream (Ages 15–25)</div>
-                                    <ul class="stream-list">
-                                        <li>Academic pathways & workforce readiness</li>
-                                        <li>Financial literacy & life skill fundamentals</li>
-                                        <li>Healthy relationships & finding a life partner</li>
-                                        <li>Navigating institutions & support systems</li>
-                                        <li>Special Session: Accountable paths forward with former justice-involved mentors</li>
-                                    </ul>
-                                </div>
-
-                                <div class="stream-box">
-                                    <div class="stream-badge">Adult Men Stream (Ages 35+)</div>
-                                    <ul class="stream-list">
-                                        <li>Community leadership & building social capital</li>
-                                        <li>Fatherhood, family restoration & legacy</li>
-                                        <li>Financial literacy, investment & wealth creation</li>
-                                        <li>Physical health, stress & emotional well-being</li>
-                                        <li>Special Closed Session: Confidential solutions-focused reintegration dialogue</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="day-block" id="day-block-2" data-index="2">
-                        <div class="block-badge-header">
-                            <div class="target-badge">Focus: Action Planning & Community-Wide</div>
+                            <div class="time-stamp">12:00 PM – 12:45 PM</div>
+                            <h3 class="session-title">Session 5: Justice, Corrections & Community Safety</h3>
+                            <p class="session-desc">Guests include formerly incarcerated men, police leaders, community workers, judges, probation and parole representatives, and educators.</p>
+                            <ul class="stream-list">
+                                <li>Why are some men entering the justice system?</li>
+                                <li>What intervention works best?</li>
+                                <li>Where can mentorship make the greatest difference?</li>
+                            </ul>
                         </div>
 
                         <div class="time-block">
-                            <div class="time-stamp">10:00 AM – 11:30 AM</div>
-                            <h3 class="session-title">Action Planning Prayer Breakfast</h3>
-                            <p class="session-desc">Moving from discussion to tangible commitments, partnerships, and measurable outcomes.</p>
+                            <div class="time-stamp">12:45 PM – 1:45 PM</div>
+                            <h3 class="session-title">Legacy Lunch II</h3>
+                            <p class="session-desc">Issue-based tables. Men choose one topic: Education, Finance, Mental Health, Family, Justice, or Health. Each table develops recommendations that are submitted directly to the Action Lab.</p>
                         </div>
 
                         <div class="time-block">
-                            <div class="time-stamp">12:00 PM – 4:30 PM</div>
-                            <h3 class="session-title">Solution Seminars & Network Building</h3>
-                            <p class="session-desc">Forming sustainable networks of support across employment, mentorship, financial literacy, and family wellness.</p>
+                            <div class="time-stamp">2:00 PM – 2:45 PM</div>
+                            <h3 class="session-title">Session 6: Men's Health & Longevity</h3>
+                            <ul class="stream-list">
+                                <li>Why do men delay seeking healthcare?</li>
+                                <li>What simple health practices should become standard?</li>
+                                <li>What can older and younger men teach each other about health?</li>
+                            </ul>
                         </div>
 
                         <div class="time-block">
-                            <div class="time-stamp">5:00 PM – 7:30 PM</div>
-                            <h3 class="session-title">Grand Community Town Hall</h3>
-                            <p class="session-desc">
-                                A massive closing town hall uniting men, youth, women, educators, faith leaders, business pioneers, and public sector representatives.
-                            </p>
-                            <p style="color: var(--text-gold-bright); font-weight: 700; margin-top: 8px;">
-                                Central Question: "Where do we go from here?" — Establishing a practical roadmap for multi-generational action.
-                            </p>
+                            <div class="time-stamp">3:00 PM – 3:45 PM</div>
+                            <h3 class="session-title">Session 7: Building Generational Legacy</h3>
+                            <p class="session-desc">The culminating room session before the Town Hall.</p>
+                            <ul class="stream-list">
+                                <li>What must our community preserve?</li>
+                                <li>What must our community change?</li>
+                                <li>What must generations build together?</li>
+                                <li>What do younger men need from older men?</li>
+                                <li>What do older men need from younger men?</li>
+                            </ul>
+                        </div>
+
+                        <div class="time-block">
+                            <div class="time-stamp">4:00 PM – 6:00 PM</div>
+                            <h3 class="session-title">National Men's Town Hall</h3>
+                            <p class="session-desc">Livestreamed into every cohort room. Men remain seated in their rooms. Questions and comments are submitted electronically through Slido or Microsoft Forms.</p>
+                            <ul class="stream-list">
+                                <li>4:00 – 4:30 PM: Generational Reports from Future, Emerging, Building, Established, and Legacy Men</li>
+                                <li>4:30 – 5:15 PM: Community Priority Reports from the Action Lab</li>
+                                <li>5:15 – 5:45 PM: Live Summit Voting</li>
+                                <li>5:45 – 6:00 PM: Adoption of the Men's Summit Declaration</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -847,11 +917,11 @@
             </div>
 
             <div class="partner-section">
-                <h3 class="partner-title">Innovative Multi-Site Campus Delivery</h3>
+                <h3 class="partner-title">Register now for the Men's Summit — December 12–13, 2026</h3>
                 <p class="partner-desc">
-                    Leveraging institutional infrastructure and technology across George Brown College locations to deliver age-appropriate parallel programming while uniting all participants through synchronized live keynotes and plenary town halls.
+                    Fathers, bring your sons. Mothers, send your sons. Elders, bring your wisdom. Young men, bring your voice. Join men of faith from five generations at George Brown Polytechnic for a powerful time of fellowship, inspiration, and spiritual growth. Please complete the form below to secure your spot.
                 </p>
-                <a href="https://form.typeform.com/to/s1R52e49" class="cta-button">Register For The Summit</a>
+                <a href="https://form.typeform.com/to/s1R52e49" class="cta-button">Secure Your Spot</a>
             </div>
 
         </div>
@@ -966,8 +1036,8 @@
            2. INTERACTIVE STICKY SCHEDULE TRANSITIONS
         ------------------------------------------------------------- */
         const dayBlocks = document.querySelectorAll('.day-block');
-        const slides = [document.getElementById('slide-0'), document.getElementById('slide-1'), document.getElementById('slide-2')];
-        const dots = [document.getElementById('dot-0'), document.getElementById('dot-1'), document.getElementById('dot-2')];
+        const slides = [document.getElementById('slide-0'), document.getElementById('slide-1')];
+        const dots = [document.getElementById('dot-0'), document.getElementById('dot-1')];
 
         let activeIndex = 0;
 
