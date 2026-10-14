@@ -41,23 +41,22 @@
             width: 100vw;
             height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
+            padding-bottom: 6vh;
             overflow: hidden;
         }
 
         .hero-video {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            object-position: center;
             z-index: 1;
-            filter: brightness(0.45);
+            filter: brightness(0.7);
         }
 
         .hero-overlay {
@@ -659,9 +658,7 @@
 <body>
 
     <section class="hero">
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source src="men-attending-conference.mp4" type="video/mp4">
-        </video>
+        <img class="hero-video" src="hero-photo.jpg" alt="Five generations of men standing side by side, from boys to elders">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="hero-limited">Limited Spots • Only 800 Men</p>
