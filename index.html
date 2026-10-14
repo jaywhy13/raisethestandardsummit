@@ -66,6 +66,23 @@
             z-index: 2;
         }
 
+        .hero-date {
+            position: absolute;
+            top: 7vh;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: clamp(0.95rem, 2vw, 1.3rem);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+            padding: 0 20px;
+        }
+
         .hero-content {
             position: relative;
             z-index: 3;
@@ -660,6 +677,7 @@
     <section class="hero">
         <img class="hero-video" src="hero-photo.jpg" alt="Five generations of men standing side by side, from boys to elders">
         <div class="hero-overlay"></div>
+        <p class="hero-date">December 12–13, 2026 • George Brown Polytechnic • Toronto</p>
         <div class="hero-content">
             <p class="hero-limited">Limited Spots • Only 800 Men</p>
             <h1 class="hero-title">Raise The Standard</h1>
