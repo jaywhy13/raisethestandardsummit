@@ -43,7 +43,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            padding-bottom: 6vh;
+            padding-bottom: 2vh;
             overflow: hidden;
         }
 
@@ -56,7 +56,7 @@
             object-fit: cover;
             object-position: center;
             z-index: 1;
-            filter: brightness(0.7);
+            filter: brightness(0.8);
         }
 
         .hero-overlay {
@@ -123,7 +123,17 @@
             padding: 8px 20px;
             border-radius: 50px;
             text-transform: uppercase;
-            margin-bottom: 24px;
+            margin-top: 28px;
+        }
+
+        .hero-presents {
+            font-family: var(--font-heading);
+            font-size: clamp(0.8rem, 1.6vw, 1rem);
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--text-gold-bright);
+            margin-bottom: 18px;
         }
 
         .hero-tagline {
@@ -609,6 +619,42 @@
             margin-bottom: 15px;
         }
 
+        .partner-free {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: var(--text-gold-bright);
+            margin-bottom: 18px;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .sponsor-tile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            padding: 28px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+        }
+
+        .sponsor-tile.dark {
+            background: #0d0d0e;
+        }
+
+        .sponsor-tile img {
+            max-width: 100%;
+            max-height: 110px;
+            object-fit: contain;
+        }
+
         .partner-desc {
             font-size: 1rem;
             color: var(--text-muted);
@@ -679,10 +725,11 @@
         <div class="hero-overlay"></div>
         <p class="hero-date">December 12–13, 2026 • George Brown Polytechnic • Toronto</p>
         <div class="hero-content">
-            <p class="hero-limited">Limited Spots • Only 800 Men</p>
+            <p class="hero-presents">The 100 Strong Foundation Presents</p>
             <h1 class="hero-title">Raise The Standard</h1>
             <p class="hero-subtitle">Greater Toronto Area Men's Summit</p>
-            <p class="hero-tagline">800 Black Men. 5 Generations. 1 Conversation.</p>
+            <p class="hero-tagline">800 Black Men. 5 Generations. 1 Brotherhood.</p>
+            <p class="hero-limited">Limited Spots • Only 800 Men</p>
         </div>
     </section>
 
@@ -697,8 +744,6 @@
                 <h2 class="main-heading">Raise The Standard</h2>
                 <div class="sliding-text-wrapper">
                     <div class="sub-text" id="text-man">as a man</div>
-                    <div class="sub-text" id="text-husband">as a husband</div>
-                    <div class="sub-text" id="text-father">as a father</div>
                 </div>
             </div>
         </div>
@@ -708,7 +753,7 @@
         <div class="container">
             <div class="manifesto-box">
                 <p class="section-tag">A First-Of-Its-Kind Landmark Gathering</p>
-                <h2 class="manifesto-lead">From Survival to Structure, Discipline, Ownership & Thriving</h2>
+                <h2 class="manifesto-lead">From Survival to Structure, Discipline, Ownership & Purpose</h2>
                 <p class="manifesto-body">
                     A multi-generational gathering bringing together boys, men, educators, faith leaders, business pioneers, and community stakeholders from across the Greater Toronto Area and Ontario. This is not simply an event—it is an intervention to create a sustained framework for collaboration, strengthening pathways to long-term success.
                 </p>
@@ -933,12 +978,34 @@
 
             <div class="partner-section">
                 <h3 class="partner-title">Register now for the Men's Summit — December 12–13, 2026</h3>
+                <p class="partner-free">Registration is FREE and open to all</p>
                 <p class="partner-desc">
-                    Fathers, bring your sons. Mothers, send your sons. Elders, bring your wisdom. Young men, bring your voice. Join men of faith from five generations at George Brown Polytechnic for a powerful time of fellowship, inspiration, and spiritual growth. Please complete the form below to secure your spot.
+                    Fathers, bring your sons. Mothers, send your sons. Elders, bring your wisdom. Young men, bring your voice. Join men of faith from five generations at George Brown Polytechnic for a powerful time of fellowship, inspiration, and spiritual growth. Register through the button below to secure your spot.
                 </p>
-                <a href="https://form.typeform.com/to/s1R52e49" class="cta-button">Secure Your Spot</a>
+                <a href="https://100strong.culturetix.ca" class="cta-button">Secure Your Spot</a>
             </div>
 
+        </div>
+    </section>
+
+    <section class="content-section sponsors-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Our Partners</p>
+                <h2 class="section-title">Sponsors &amp; Partners</h2>
+            </div>
+
+            <div class="sponsor-grid">
+                <div class="sponsor-tile">
+                    <img src="logos/100-strong.png" alt="100 Strong Foundation">
+                </div>
+                <div class="sponsor-tile dark">
+                    <img src="logos/byblacks.png" alt="BuyBlacks.ca">
+                </div>
+                <div class="sponsor-tile">
+                    <img src="logos/george-brown.png" alt="George Brown Polytechnic">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -953,13 +1020,9 @@
         const video = document.getElementById('aspectVideo');
         const sequenceContainer = document.getElementById('sequence');
         const textMan = document.getElementById('text-man');
-        const textHusband = document.getElementById('text-husband');
-        const textFather = document.getElementById('text-father');
 
         const CHECKPOINTS = {
-            1: 0.8, // "as a man"
-            2: 3.2, // "as a husband"
-            3: 6.5  // "as a father"
+            1: 0.8 // "as a man" (single frame, no other people in shot)
         };
 
         let currentStage = -1;
@@ -975,15 +1038,7 @@
             let progress = -rect.top / containerHeight;
             progress = Math.max(0, Math.min(1, progress));
 
-            if (progress < 0.05) {
-                setStage(0);
-            } else if (progress >= 0.05 && progress < 0.38) {
-                setStage(1);
-            } else if (progress >= 0.38 && progress < 0.70) {
-                setStage(2);
-            } else if (progress >= 0.70 && progress <= 1.0) {
-                setStage(3);
-            }
+            setStage(progress < 0.05 ? 0 : 1);
 
             if (progress > 0.85) {
                 const fadeProgress = (progress - 0.85) / 0.15;
@@ -999,23 +1054,9 @@
 
             if (newStage === 1) {
                 textMan.className = 'sub-text active';
-                textHusband.className = 'sub-text enter-right';
-                textFather.className = 'sub-text enter-right';
                 playToTime(CHECKPOINTS[1]);
-            } else if (newStage === 2) {
-                textMan.className = 'sub-text exit-left';
-                textHusband.className = 'sub-text active';
-                textFather.className = 'sub-text enter-right';
-                playToTime(CHECKPOINTS[2]);
-            } else if (newStage === 3) {
-                textMan.className = 'sub-text exit-left';
-                textHusband.className = 'sub-text exit-left';
-                textFather.className = 'sub-text active';
-                playToTime(CHECKPOINTS[3]);
-            } else if (newStage === 0) {
+            } else {
                 textMan.className = 'sub-text enter-right';
-                textHusband.className = 'sub-text enter-right';
-                textFather.className = 'sub-text enter-right';
                 playToTime(0);
             }
         }
@@ -1058,8 +1099,8 @@
 
         const observerOptions = {
             root: null,
-            rootMargin: '-20% 0px -40% 0px',
-            threshold: 0.2
+            rootMargin: '-49% 0px -49% 0px',
+            threshold: 0
         };
 
         const scheduleObserver = new IntersectionObserver((entries) => {
