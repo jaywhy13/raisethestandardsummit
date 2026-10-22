@@ -552,6 +552,30 @@
             margin-bottom: 8px;
         }
 
+        .agenda-line {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px 28px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .agenda-line:last-child {
+            border-bottom: none;
+        }
+
+        .agenda-line .time-stamp {
+            margin-bottom: 0;
+            min-width: 250px;
+            white-space: nowrap;
+        }
+
+        .agenda-line .session-title {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
         .session-desc {
             font-size: 1rem;
             color: var(--text-muted);
@@ -855,67 +879,33 @@
                             <div class="target-badge">Day One • Understanding the Challenges</div>
                         </div>
 
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">9:30 AM – 11:30 AM</div>
                             <h3 class="session-title">Prayer Breakfast (All Men)</h3>
-                            <ul class="stream-list">
-                                <li>Worship & prayer</li>
-                                <li>Main address and testimony panel</li>
-                                <li>Conference charge</li>
-                            </ul>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">12:00 PM – 12:45 PM</div>
-                            <h3 class="session-title">Session 1: Education & Future Readiness</h3>
-                            <ul class="stream-list">
-                                <li>What educational barriers are affecting men in your generation?</li>
-                                <li>What is working?</li>
-                                <li>What needs immediate attention?</li>
-                            </ul>
+                            <h3 class="session-title">Session 1: Education &amp; Future Readiness</h3>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">12:45 PM – 1:45 PM</div>
                             <h3 class="session-title">Legacy Lunch I</h3>
-                            <p class="session-desc">Intergenerational tables, each seated with a teen representative, a young adult, an adult man, and a senior man.</p>
-                            <ul class="stream-list">
-                                <li>What has your generation done well?</li>
-                                <li>What does your generation wish the next generation understood?</li>
-                                <li>What fears do you have for the future?</li>
-                            </ul>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">2:00 PM – 2:45 PM</div>
-                            <h3 class="session-title">Session 2: Financial Freedom & Economic Mobility</h3>
-                            <ul class="stream-list">
-                                <li>Why are men struggling financially?</li>
-                                <li>What financial skills are most needed?</li>
-                                <li>How do we build generational wealth?</li>
-                            </ul>
+                            <h3 class="session-title">Session 2: Financial Freedom &amp; Economic Mobility</h3>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">3:00 PM – 3:45 PM</div>
-                            <h3 class="session-title">Session 3: Mental Health & Emotional Wellness</h3>
-                            <ul class="stream-list">
-                                <li>Why do men suffer in silence?</li>
-                                <li>What supports are missing?</li>
-                                <li>How can men help each other?</li>
-                            </ul>
+                            <h3 class="session-title">Session 3: Mental Health &amp; Emotional Wellness</h3>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">4:00 PM – 4:45 PM</div>
-                            <h3 class="session-title">Session 4: Family, Fatherhood & Relationships</h3>
-                            <p class="session-desc"><strong style="color: var(--text-gold-bright);">Flagship session.</strong> Dedicated discussion areas include fathers of daughters, fathers of sons, blended families, co-parenting, marriage under pressure, single fathers, and restoring family relationships.</p>
+                            <h3 class="session-title">Session 4: Family, Fatherhood &amp; Relationships</h3>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">5:00 PM – 6:00 PM</div>
                             <h3 class="session-title">Room Reflection Session</h3>
-                            <p class="session-desc">Each room identifies its top 3 concerns, top 3 strengths, and top 3 recommendations. Data is entered immediately into the Action Lab.</p>
                         </div>
                     </div>
 
@@ -924,62 +914,29 @@
                             <div class="target-badge">Day Two • Building Solutions</div>
                         </div>
 
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">9:30 AM – 11:30 AM</div>
                             <h3 class="session-title">Prayer Breakfast</h3>
-                            <p class="session-desc">All men together.</p>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">12:00 PM – 12:45 PM</div>
-                            <h3 class="session-title">Session 5: Justice, Corrections & Community Safety</h3>
-                            <p class="session-desc">Guests include formerly incarcerated men, police leaders, community workers, judges, probation and parole representatives, and educators.</p>
-                            <ul class="stream-list">
-                                <li>Why are some men entering the justice system?</li>
-                                <li>What intervention works best?</li>
-                                <li>Where can mentorship make the greatest difference?</li>
-                            </ul>
+                            <h3 class="session-title">Session 5: Justice, Corrections &amp; Community Safety</h3>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">12:45 PM – 1:45 PM</div>
                             <h3 class="session-title">Legacy Lunch II</h3>
-                            <p class="session-desc">Issue-based tables. Men choose one topic: Education, Finance, Mental Health, Family, Justice, or Health. Each table develops recommendations that are submitted directly to the Action Lab.</p>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">2:00 PM – 2:45 PM</div>
-                            <h3 class="session-title">Session 6: Men's Health & Longevity</h3>
-                            <ul class="stream-list">
-                                <li>Why do men delay seeking healthcare?</li>
-                                <li>What simple health practices should become standard?</li>
-                                <li>What can older and younger men teach each other about health?</li>
-                            </ul>
+                            <h3 class="session-title">Session 6: Men's Health &amp; Longevity</h3>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">3:00 PM – 3:45 PM</div>
                             <h3 class="session-title">Session 7: Building Generational Legacy</h3>
-                            <p class="session-desc">The culminating room session before the Town Hall.</p>
-                            <ul class="stream-list">
-                                <li>What must our community preserve?</li>
-                                <li>What must our community change?</li>
-                                <li>What must generations build together?</li>
-                                <li>What do younger men need from older men?</li>
-                                <li>What do older men need from younger men?</li>
-                            </ul>
                         </div>
-
-                        <div class="time-block">
+                        <div class="agenda-line">
                             <div class="time-stamp">4:00 PM – 6:00 PM</div>
                             <h3 class="session-title">National Men's Town Hall</h3>
-                            <p class="session-desc">Livestreamed into every cohort room. Men remain seated in their rooms. Questions and comments are submitted electronically through Slido or Microsoft Forms.</p>
-                            <ul class="stream-list">
-                                <li>4:00 – 4:30 PM: Generational Reports from Future, Emerging, Building, Established, and Legacy Men</li>
-                                <li>4:30 – 5:15 PM: Community Priority Reports from the Action Lab</li>
-                                <li>5:15 – 5:45 PM: Live Summit Voting</li>
-                                <li>5:45 – 6:00 PM: Adoption of the Men's Summit Declaration</li>
-                            </ul>
                         </div>
                     </div>
 
