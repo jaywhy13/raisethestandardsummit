@@ -684,6 +684,66 @@
             margin: 0 auto;
         }
 
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .faq-q {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: var(--text-muted);
+        }
+
+        .faq-a a {
+            color: var(--text-gold-bright);
+        }
+
+        .topics-block {
+            margin-top: 60px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .topics-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 24px;
+        }
+
+        .topics-list {
+            columns: 280px 2;
+            column-gap: 40px;
+        }
+
+        .topics-list li {
+            break-inside: avoid;
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
+
+        a.sponsor-tile {
+            text-decoration: none;
+            transition: border-color 0.3s ease;
+        }
+
+        a.sponsor-tile:hover {
+            border-color: var(--text-gold);
+        }
+
         .sponsor-tile.dark {
             background: #0d0d0e;
         }
@@ -849,7 +909,7 @@
             <div class="date-hero-banner">
                 <div class="date-hero-title">December 12 – 13, 2026</div>
                 <div class="date-hero-subtitle">Saturday • Sunday</div>
-                <p class="date-hero-venue">George Brown Polytechnic • 51 Dockside Drive, Toronto, ON M5A 0B6</p>
+                <p class="date-hero-venue">George Brown Polytechnic • Waterfront Campus • 51 Dockside Drive, Toronto, ON M5A 0B6</p>
             </div>
 
             <div class="section-header">
@@ -881,71 +941,84 @@
                     
                     <div class="day-block is-focused" id="day-block-0" data-index="0">
                         <div class="block-badge-header">
-                            <div class="target-badge">Day One • Understanding the Challenges</div>
+                            <div class="target-badge">Sat Dec 12</div>
                         </div>
 
                         <div class="agenda-line">
-                            <div class="time-stamp">9:30 AM – 11:30 AM</div>
-                            <h3 class="session-title">Prayer Breakfast (All Men)</h3>
+                            <div class="time-stamp">9:30 AM - 11:30 AM</div>
+                            <h3 class="session-title">Faith Community Gathering (optional)</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">12:00 PM – 12:45 PM</div>
-                            <h3 class="session-title">Session 1: Education &amp; Future Readiness</h3>
+                            <div class="time-stamp">12:00 PM - 12:45 PM</div>
+                            <h3 class="session-title">Session 1</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">12:45 PM – 1:45 PM</div>
-                            <h3 class="session-title">Legacy Lunch I</h3>
+                            <div class="time-stamp">12:45 PM - 1:45 PM</div>
+                            <h3 class="session-title">Legacy Lunch - Part I</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">2:00 PM – 2:45 PM</div>
-                            <h3 class="session-title">Session 2: Financial Freedom &amp; Economic Mobility</h3>
+                            <div class="time-stamp">2:00 PM - 2:45 PM</div>
+                            <h3 class="session-title">Session 2</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">3:00 PM – 3:45 PM</div>
-                            <h3 class="session-title">Session 3: Mental Health &amp; Emotional Wellness</h3>
+                            <div class="time-stamp">3:00 PM - 3:45 PM</div>
+                            <h3 class="session-title">Session 3</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">4:00 PM – 4:45 PM</div>
-                            <h3 class="session-title">Session 4: Family, Fatherhood &amp; Relationships</h3>
+                            <div class="time-stamp">4:00 PM - 4:45 PM</div>
+                            <h3 class="session-title">Session 4</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">5:00 PM – 6:00 PM</div>
+                            <div class="time-stamp">5:00 PM - 6:00 PM</div>
                             <h3 class="session-title">Room Reflection Session</h3>
                         </div>
                     </div>
 
                     <div class="day-block" id="day-block-1" data-index="1">
                         <div class="block-badge-header">
-                            <div class="target-badge">Day Two • Building Solutions</div>
+                            <div class="target-badge">Sun Dec 13</div>
                         </div>
 
                         <div class="agenda-line">
-                            <div class="time-stamp">9:30 AM – 11:30 AM</div>
-                            <h3 class="session-title">Prayer Breakfast</h3>
+                            <div class="time-stamp">9:30 AM - 11:30 AM</div>
+                            <h3 class="session-title">Faith Community Gathering (optional)</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">12:00 PM – 12:45 PM</div>
-                            <h3 class="session-title">Session 5: Justice, Corrections &amp; Community Safety</h3>
+                            <div class="time-stamp">12:00 PM - 12:45 PM</div>
+                            <h3 class="session-title">Session 5</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">12:45 PM – 1:45 PM</div>
-                            <h3 class="session-title">Legacy Lunch II</h3>
+                            <div class="time-stamp">12:45 PM - 1:45 PM</div>
+                            <h3 class="session-title">Legacy Lunch - Part II</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">2:00 PM – 2:45 PM</div>
-                            <h3 class="session-title">Session 6: Men's Health &amp; Longevity</h3>
+                            <div class="time-stamp">2:00 PM - 2:45 PM</div>
+                            <h3 class="session-title">Session 6</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">3:00 PM – 3:45 PM</div>
-                            <h3 class="session-title">Session 7: Building Generational Legacy</h3>
+                            <div class="time-stamp">3:00 PM - 3:45 PM</div>
+                            <h3 class="session-title">Session 7</h3>
                         </div>
                         <div class="agenda-line">
-                            <div class="time-stamp">4:00 PM – 6:00 PM</div>
+                            <div class="time-stamp">4:00 PM - 6:00 PM</div>
                             <h3 class="session-title">National Men's Town Hall</h3>
                         </div>
                     </div>
 
                 </div>
+            </div>
+
+            <div class="topics-block">
+                <h3 class="topics-title">Session Topics</h3>
+                <ul class="stream-list topics-list">
+                    <li>Education and Future Readiness</li>
+                    <li>Financial Freedom and Economic Mobility</li>
+                    <li>Mental Health and Emotional Wellness</li>
+                    <li>Family, Fatherhood and Relationships</li>
+                    <li>Justice, Corrections and Community Safety</li>
+                    <li>Men's Health and Longevity</li>
+                    <li>Building Generational Legacy</li>
+                </ul>
             </div>
 
             <div class="partner-section">
@@ -961,6 +1034,42 @@
         </div>
     </section>
 
+    <section class="content-section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Good To Know</p>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <p class="faq-q">Who is this event for?</p>
+                    <p class="faq-a">The summit is open to all Black men, ages 13 and up.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">How much is the entry fee?</p>
+                    <p class="faq-a">There is no cost to register. Admission is FREE.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">Where will this be held?</p>
+                    <p class="faq-a">The summit will take place at GEORGE BROWN POLYTECHNIC Waterfront Campus: 51 Dockside Drive, Toronto, ON M5A 0B6</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">What can I do to help?</p>
+                    <p class="faq-a">Please share this information with as many people within your network.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">I want to make a financial contribution towards this effort. How can I make that happen?</p>
+                    <p class="faq-a">You can contact the 100 Strong Foundation via e-mail at info@100strong.ca to receive further instructions on how you can donate.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">Is there anything else that I can do?</p>
+                    <p class="faq-a">There are eight (8) different committees that we are looking to staff. Click <a href="https://forms.gle/FbpLTSb4GU3fYSF67" target="_blank" rel="noopener">HERE</a> to join one of the committees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="content-section sponsors-section">
         <div class="container">
             <div class="section-header">
@@ -969,18 +1078,18 @@
             </div>
 
             <div class="sponsor-grid">
-                <div class="sponsor-tile">
+                <a class="sponsor-tile" href="https://100strongfoundation.ca/" target="_blank" rel="noopener">
                     <img src="logos/100-strong.png" alt="100 Strong Foundation">
-                </div>
-                <div class="sponsor-tile">
+                </a>
+                <a class="sponsor-tile" href="https://www.georgebrown.ca/" target="_blank" rel="noopener">
                     <img src="logos/george-brown.png" alt="George Brown Polytechnic">
-                </div>
+                </a>
                 <div class="sponsor-tile">
                     <img src="logos/stand-united.png" alt="Stand United">
                 </div>
-                <div class="sponsor-tile">
+                <a class="sponsor-tile" href="https://100strong.culturetix.ca/raising-the-standard-mens-summit-s0gib" target="_blank" rel="noopener">
                     <img src="logos/culturetix.png" alt="CultureTix">
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -993,9 +1102,9 @@
             </div>
 
             <div class="sponsor-grid media-grid">
-                <div class="sponsor-tile dark">
+                <a class="sponsor-tile dark" href="https://byblacks.com/" target="_blank" rel="noopener">
                     <img src="logos/byblacks.png" alt="BuyBlacks.ca">
-                </div>
+                </a>
             </div>
         </div>
     </section>
