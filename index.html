@@ -37,7 +37,9 @@
 
         /* --- Hero Section --- */
         .hero {
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1;
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -57,6 +59,7 @@
             object-position: center;
             z-index: 1;
             filter: brightness(0.8);
+            will-change: transform, opacity;
         }
 
         .hero-overlay {
@@ -143,104 +146,6 @@
             color: var(--text-light);
             margin-top: 14px;
             letter-spacing: 0.05em;
-        }
-
-        /* --- Scroll Video Sequence Container --- */
-        .scroll-sequence-container {
-            position: relative;
-            height: 400vh;
-            background-color: var(--bg-color);
-        }
-
-        .sticky-wrapper {
-            position: sticky;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .sequence-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 1;
-            filter: brightness(0.4);
-            transition: opacity 0.8s ease;
-        }
-
-        .sequence-overlay {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(5,5,5,0.95) 100%);
-            z-index: 2;
-        }
-
-        .text-stage {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .main-heading {
-            font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 6.5vw, 5.8rem);
-            font-weight: 900;
-            letter-spacing: -0.01em;
-            text-transform: uppercase;
-            color: #ffffff;
-            text-shadow: 0 4px 25px rgba(0,0,0,0.9);
-        }
-
-        .sliding-text-wrapper {
-            position: relative;
-            height: 90px;
-            width: 100vw;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .sub-text {
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            font-family: var(--font-heading);
-            font-size: clamp(1.8rem, 4.5vw, 3.8rem);
-            font-weight: 800;
-            color: var(--text-gold);
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            opacity: 0;
-            transform: translateX(100vw);
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
-        }
-
-        .sub-text.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .sub-text.exit-left {
-            opacity: 0;
-            transform: translateX(-100vw);
-        }
-
-        .sub-text.enter-right {
-            opacity: 0;
-            transform: translateX(100vw);
         }
 
         /* --- Section Shared Layout --- */
@@ -832,22 +737,6 @@
         </div>
     </section>
 
-    <div class="scroll-sequence-container" id="sequence">
-        <div class="sticky-wrapper">
-            <video class="sequence-video" id="aspectVideo" muted playsinline preload="auto">
-                <source src="man-husband-father.mp4" type="video/mp4">
-            </video>
-            <div class="sequence-overlay"></div>
-            
-            <div class="text-stage">
-                <h2 class="main-heading">Raise The Standard</h2>
-                <div class="sliding-text-wrapper">
-                    <div class="sub-text" id="text-man">as a man</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section class="content-section">
         <div class="container">
             <div class="manifesto-box">
@@ -1115,78 +1004,19 @@
 
     <script>
         /* -------------------------------------------------------------
-           1. VIDEO CHECKPOINT SCROLL MECHANICS
+           1. HERO BACKGROUND FADE (text stays fully visible)
         ------------------------------------------------------------- */
-        const video = document.getElementById('aspectVideo');
-        const sequenceContainer = document.getElementById('sequence');
-        const textMan = document.getElementById('text-man');
+        const heroImage = document.querySelector('.hero-video');
+        const heroSection = document.querySelector('.hero');
 
-        const CHECKPOINTS = {
-            1: 0.8 // "as a man" (single frame, no other people in shot)
-        };
-
-        let currentStage = -1;
-        let targetTime = 0;
-        let checkAnimationFrame = null;
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        function handleScroll() {
-            const rect = sequenceContainer.getBoundingClientRect();
-            const containerHeight = sequenceContainer.clientHeight - window.innerHeight;
-            
-            let progress = -rect.top / containerHeight;
-            progress = Math.max(0, Math.min(1, progress));
-
-            setStage(progress < 0.05 ? 0 : 1);
-
-            if (progress > 0.85) {
-                const fadeProgress = (progress - 0.85) / 0.15;
-                video.style.opacity = Math.max(0, 1 - fadeProgress);
-            } else {
-                video.style.opacity = 1;
-            }
+        function updateHero() {
+            const p = Math.min(1, window.scrollY / heroSection.offsetHeight);
+            heroImage.style.transform = `translate3d(0, ${p * 25}%, 0)`;
+            heroImage.style.opacity = String(1 - p * 0.9);
         }
 
-        function setStage(newStage) {
-            if (currentStage === newStage) return;
-            currentStage = newStage;
-
-            if (newStage === 1) {
-                textMan.className = 'sub-text active';
-                playToTime(CHECKPOINTS[1]);
-            } else {
-                textMan.className = 'sub-text enter-right';
-                playToTime(0);
-            }
-        }
-
-        function playToTime(time) {
-            targetTime = time;
-
-            if (video.currentTime > targetTime) {
-                video.pause();
-                video.currentTime = targetTime;
-                return;
-            }
-
-            video.play().catch(() => {});
-
-            if (checkAnimationFrame) {
-                cancelAnimationFrame(checkAnimationFrame);
-            }
-
-            function checkTime() {
-                if (video.currentTime >= targetTime) {
-                    video.pause();
-                    video.currentTime = targetTime;
-                } else if (!video.paused) {
-                    checkAnimationFrame = requestAnimationFrame(checkTime);
-                }
-            }
-
-            checkAnimationFrame = requestAnimationFrame(checkTime);
-        }
+        window.addEventListener('scroll', updateHero, { passive: true });
+        updateHero();
 
         /* -------------------------------------------------------------
            2. INTERACTIVE STICKY SCHEDULE TRANSITIONS
