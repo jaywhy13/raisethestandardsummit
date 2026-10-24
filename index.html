@@ -1014,8 +1014,9 @@
         function updateHero() {
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             const p = Math.min(1, Math.max(0, window.scrollY / (maxScroll * 0.8)));
-            heroImage.style.opacity = String(1 - p);
-            heroImage.style.filter = `brightness(${0.8 - p * 0.8})`;
+            const eased = p * p;
+            heroImage.style.opacity = String(1 - eased);
+            heroImage.style.filter = `brightness(${0.8 - eased * 0.8})`;
         }
 
         window.addEventListener('scroll', updateHero, { passive: true });
