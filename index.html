@@ -37,9 +37,7 @@
 
         /* --- Hero Section --- */
         .hero {
-            position: sticky;
-            top: 0;
-            z-index: 1;
+            position: relative;
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -59,7 +57,7 @@
             object-position: center;
             z-index: 1;
             filter: brightness(0.8);
-            will-change: transform, opacity;
+            will-change: opacity, filter;
         }
 
         .hero-overlay {
@@ -1004,15 +1002,15 @@
 
     <script>
         /* -------------------------------------------------------------
-           1. HERO BACKGROUND FADE (text stays fully visible)
+           1. HERO BACKGROUND FADE (page scrolls normally; background dims)
         ------------------------------------------------------------- */
         const heroImage = document.querySelector('.hero-video');
         const heroSection = document.querySelector('.hero');
 
         function updateHero() {
-            const p = Math.min(1, window.scrollY / heroSection.offsetHeight);
-            heroImage.style.transform = `translate3d(0, ${p * 25}%, 0)`;
-            heroImage.style.opacity = String(1 - p * 0.9);
+            const p = Math.min(1, Math.max(0, window.scrollY / heroSection.offsetHeight));
+            heroImage.style.opacity = String(1 - p * 0.85);
+            heroImage.style.filter = `brightness(${0.8 - p * 0.6})`;
         }
 
         window.addEventListener('scroll', updateHero, { passive: true });
