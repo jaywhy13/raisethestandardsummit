@@ -127,6 +127,30 @@
             margin-top: 28px;
         }
 
+        .hero-cta {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 16px 44px;
+            background: var(--text-gold);
+            color: #000000;
+            font-family: var(--font-heading);
+            font-size: clamp(0.85rem, 1.6vw, 1rem);
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--text-gold);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta:hover,
+        .hero-cta:focus-visible {
+            background: #000000;
+            color: var(--text-gold);
+            box-shadow: 0 0 0 1px var(--text-gold), 0 8px 24px rgba(197, 160, 89, 0.35);
+        }
+
         .hero-presents {
             font-family: var(--font-heading);
             font-size: clamp(0.8rem, 1.6vw, 1rem);
@@ -732,6 +756,7 @@
             <p class="hero-subtitle">Greater Toronto Area Men's Summit</p>
             <p class="hero-tagline">800 Black Men. 5 Generations. 1 Brotherhood.</p>
             <p class="hero-limited">Limited Spots • Only 800 Men</p>
+            <div><a href="https://form.typeform.com/to/s1R52e49" class="hero-cta">Secure Your Spot</a></div>
         </div>
     </section>
 
